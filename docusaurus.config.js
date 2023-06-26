@@ -4,11 +4,11 @@ const darkCodeTheme = require('./dark.theme.js');
 const theme = require('shiki/themes/material-default.json');
 const { remarkCodeHike } = require('@code-hike/mdx');
 /** @type {import('@docusaurus/types').Config} */
-module.exports = async function config() {
+module.exports = async function config () {
   const math = (await import('remark-math')).default;
   const katex = (await import('rehype-katex')).default;
   return {
-    title: 'Terra Docs',
+    title: 'Terra Classic Docs',
     tagline: 'The official docs for the Terra blockchain',
     url: 'https://docs.terra.money',
     baseUrl: '/',
@@ -21,18 +21,18 @@ module.exports = async function config() {
       defaultLocale: 'en',
       locales: ['en'],
     },
-    
+
     plugins: [
-      'docusaurus-plugin-sass', 
-    [
-      require.resolve("@gabrielcsapo/docusaurus-plugin-matomo"),
-      {
-        siteId: "1",
-        matomoUrl: "https://terradocs.matomo.cloud/",
-        siteUrl: "https://docs.terra.money",
-      },
+      'docusaurus-plugin-sass',
+      [
+        require.resolve("@gabrielcsapo/docusaurus-plugin-matomo"),
+        {
+          siteId: "1",
+          matomoUrl: "https://terradocs.matomo.cloud/",
+          siteUrl: "https://docs.terra.money",
+        },
+      ],
     ],
-  ],
     presets: [
       [
         'classic',
@@ -56,7 +56,7 @@ module.exports = async function config() {
             routeBasePath: '/', // Serve the docs at the site's root
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
-            editUrl: 'https://github.com/terra-money/docs/blob/main/',
+            editUrl: 'https://github.com/classic-terra/classic-docs-next/blob/main/',
           },
           blog: false,
           theme: {
@@ -104,7 +104,7 @@ module.exports = async function config() {
         navbar: {
           title: '',
           logo: {
-            alt: 'Terra Docs',
+            alt: 'Terra Classic Docs',
             src: 'img/logo_light.svg',
             srcDark: 'img/logo_dark.svg',
           },

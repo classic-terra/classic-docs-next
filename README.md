@@ -1,4 +1,4 @@
-# Terra Docs
+# Terra Classic Docs
 
 <div align="center">
   <a href="https://docs.terra.money/">
@@ -80,7 +80,7 @@ danger
 
 For dropdown details, use the following syntax:
 
-<details> 
+<details>
 <summary> example </summary>
 <p>
 
