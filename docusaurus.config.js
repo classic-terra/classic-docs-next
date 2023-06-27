@@ -110,7 +110,7 @@ module.exports = async function config () {
           },
           items: [
             {
-              href: 'https://terra.money', //front-end URL
+              href: 'https://terrac.money', //front-end URL
               position: 'right',
               label: 'terra.money',
               className: 'header-terra-link',
