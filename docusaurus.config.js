@@ -10,7 +10,7 @@ module.exports = async function config () {
   return {
     title: 'Terra Classic Docs',
     tagline: 'The official docs for the Terra blockchain',
-    url: 'https://docs.terra.money',
+    url: 'https://docs.terrac.money',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -29,7 +29,7 @@ module.exports = async function config () {
         {
           siteId: "1",
           matomoUrl: "https://terradocs.matomo.cloud/",
-          siteUrl: "https://docs.terra.money",
+          siteUrl: "https://docs.terrac.money",
         },
       ],
     ],
@@ -112,7 +112,7 @@ module.exports = async function config () {
             {
               href: 'https://terrac.money', //front-end URL
               position: 'right',
-              label: 'terra.money',
+              label: 'terrac.money',
               className: 'header-terra-link',
               'aria-label': 'Terra Money',
             },
