@@ -70,10 +70,10 @@ These instructions are for setting up a brand new full node from scratch. You ca
 
 Specify the network you want to join by choosing the corresponding **genesis file** and **seeds list**:
 
-	| Network     | Type    | Genesis                                                                                        | Addressbook                                                                              | Seeds                                                                             |
-| :---------- | :------ | :------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
-| `phoenix-1` | Mainnet | [Genesis Link](https://phoenix-genesis.s3.us-west-1.amazonaws.com/genesis.json)                   |  Peer List Community maintained by [Polkachu](https://polkachu.com/addrbooks/terra)      | [Seeds List](https://github.com/terra-money/mainnet#seed-nodes)                   |
-| `pisco-1`   | Testnet | [Genesis Link](https://raw.githubusercontent.com/terra-money/testnet/master/pisco-1/genesis.json) |  Peer List Community maintained by [Polkachu](https://polkachu.com/testnets/terra/peers) | [Seeds List](https://github.com/terra-money/testnet/tree/main/pisco-1#seed-nodes) |
+	| Network   | Type    | Genesis                                                                                          | Addressbook                                                                                           | Seeds                                                              |
+| :----------- | :------ | :----------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------- |
+| `columbus-5` | Mainnet | [Genesis Link](https://columbus-genesis.s3.ap-northeast-1.amazonaws.com/columbus-5-genesis.json) |  [Peer List](https://raw.githubusercontent.com/classic-terra/mainnet/master/columbus-5/addrbook.json) | [Seeds List](https://github.com/classic-terra/mainnet#seed-nodes)  |
+| `rebel-2`    | Testnet | [Genesis Link](https://network-rebel-2.s3.amazonaws.com/bajor-1/genesis.json)                    |  [Peer List](https://raw.githubusercontent.com/classic-terra/documents/main/bajor-1/addrbook.json)    |  |
 
 <Admonition type="tip" icon="💡" title="Selecting a network">
 
@@ -83,6 +83,8 @@ Note that the versions of the network listed above are the [latest versions](htt
 
 
 ### 2. Download genesis file and address book
+
+//TODO: refactor testnets repo
 
 **Genesis-transaction** specifies the account balances and parameters at the start of the network to use when replaying transactions and syncing.
 
@@ -95,11 +97,11 @@ Choose a `testnet` or `mainnet` address type and download the appropriate genesi
 **Example**:
 
 ```bash
-# Obtain the genesis for phoenix-1:
-wget https://phoenix-genesis.s3.us-west-1.amazonaws.com/genesis.json -O ~/.terra/config/genesis.json
+# Obtain the genesis for columbus-5:
+wget https://columbus-genesis.s3.ap-northeast-1.amazonaws.com/columbus-5-genesis.json -O ~/.terra/config/genesis.json
 
-# Obtain the addressbook for the phoenix-1 from Polkachu:
-wget https://snapshots1.polkachu.com/addrbook/terra/addrbook.json -O ~/.terra/config/addrbook.json
+# Obtain the addressbook for columbus-5:
+wget https://raw.githubusercontent.com/classic-terra/mainnet/master/columbus-5/addrbook.json -O ~/.terra/config/addrbook.json
 ```
 
 Continue to the [Sync](sync.mdx) page to find out more about syncing your node.

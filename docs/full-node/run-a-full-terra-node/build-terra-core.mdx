@@ -14,14 +14,16 @@ Terra Core is the official Golang reference implementation of the Terra node sof
 
 If you are syncing a node from genesis, you will need to use the appropriate core version for the block height of the respective chain you are syncing. Follow the [sync from genesis](./sync.mdx#sync-from-genesis) guide for step-by-step instructions.
 
+//TODO: Update block heights and versions.
+
 | Network Name | Network Type | Block Height Range  | Core Version |
 | :----------: | :----------: | :-----------------: | :----------: |
-| `phoenix-1`  |   Mainnet    | `genesis` - 890000  |    v2.0.0    |
-|              |              |  890000 - 2979805   |    v2.1.1    |
-|              |              | 2979805 - `4711800` |    v2.2.0    |
-|              |              | 4711800 - `present` |    v2.3.1    |
+| `columbus-5` |   Mainnet    | `genesis` - 11734000 |             |
+|              |              |  11734000 - 12815210 |    v1.1.0   |
+|              |              | 12815210 - 13215800  |    v3       |
+|              |              | 13215800 - `present` |    v4       |
 | :----------: | :----------: | :-----------------: | :----------: |
-|  `pisco-1`   |   Testnet    | `genesis` - 838500  | v2.0.0-rc.0  |
+|  `rebel-2`   |   Testnet    | `genesis` - 838500  | v2.0.0-rc.0  |
 |              |              |  838500 - 2777777   | 2.1.0-beta.1 |
 |              |              | 2777777 - 4712048   |    v2.2.0    |
 |              |              | 4712048 - `present` | v2.3.0-rc.0  |
@@ -29,10 +31,10 @@ If you are syncing a node from genesis, you will need to use the appropriate cor
 
 </Admonition>
 
-1. Use `git` to retrieve [Terra Core](https://github.com/terra-money/core/), and check out the `main` branch, which contains the latest stable release. You can find the latest tag on the [tags page](https://github.com/terra-money/core/tags) or via autocomplete in your terminal: type `git checkout v` and press `<TAB>`.
+1. Use `git` to retrieve [Terra Core](https://github.com/classic-terra/core), and check out the `main` branch, which contains the latest stable release. You can find the latest tag on the [tags page](https://github.com/terra-money/core/tags) or via autocomplete in your terminal: type `git checkout v` and press `<TAB>`.
 
    ```
-   git clone https://github.com/terra-money/core
+   git clone https://github.com/classic-terra/core
    cd core
    git checkout [latest version]
    ```
@@ -54,10 +56,10 @@ If you are syncing a node from genesis, you will need to use the appropriate cor
    ```bash
    name: terra
    server_name: terrad
-   version: v2.3.1
-   commit: ea682c41e7e71ba0b182c9e7f989855fb9595885
+   version: 2.1.2
+   commit: 4838a2c5764f093b6bd65ce8fbd060a29e603b74
    build_tags: netgo,ledger
-   go: go version go1.20.0 darwin/amd64
+   go: go version go1.18.0 darwin/arm64
    # ...followed by a lot of dependencies
    ```
 
