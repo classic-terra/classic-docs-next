@@ -2,92 +2,46 @@ import Admonition from '@theme/Admonition';
 
 # About Terra
 
-## What is Terra?
+## What is Luna Classic?
 
-Terra is an [open-source blockchain](https://github.com/terra-money/core) hosting a vibrant ecosystem of decentralized applications (dApps) and top-tier developer tools. Using proof-of-stake consensus and ground-breaking technologies like Mantlemint, Terrain, and Station, the Terra blockchain is one of the fastest chains in existence, giving users an unparalleled DeFi experience. As a permissionless, borderless economy, Terra enables next-generation financial products accessible to anyone with an Internet connection.
+The Luna Classic protocol is the leading decentralized and open-source public blockchain protocol for [algorithmic stablecoins](https://classic-docs.terra.money/docs/learn/glossary.html#algorithmic-stablecoin). Using a combination of open market [arbitrage](https://classic-docs.terra.money/docs/learn/glossary.html#arbitrage) incentives and decentralized Oracle voting, the Luna Classic protocol creates stablecoins that consistently track the price of any fiat currency. Users can spend, save, trade, or exchange Luna Classic stablecoins instantly, all on the Terra blockchain. Luna Classic provides its holders with staking rewards and governance power. The Terra Luna Classic ecosystem is a quickly expanding network of decentralized applications, creating a stable demand for Terra Luna Classic and increasing the price of Luna Classic.
 
-## What is Luna?
+## Terra Classic and Luna Classic
 
-Luna is the Terra protocol’s native [staking](./glossary.mdx#staking) token. Luna is used for [governance](#governance) and in mining. Users [stake Luna](#staking) to validators who record and verify transactions on the [blockchain](./glossary.mdx#blockchain) in exchange for rewards from transaction fees.
+The protocol consists of two main tokens, Terra Classic and Luna Classic.
 
-## A new Terra
+Terra: Stablecoins that track the price of [fiat currencies](https://classic-docs.terra.money/docs/learn/glossary.html#fiat-currency). Users mint new Terra by [burning](https://classic-docs.terra.money/docs/learn/glossary.html#burn) Luna. Stablecoins are named for their fiat counterparts. For example, the base Terra Classic stablecoin tracks the price of the [IMF’s SDR](https://classic-docs.terra.money/docs/learn/glossary.html#sdr), named TerraSDR, or SDT. Other stablecoin denominations include TerraUSD or USTC, and TerraKRW or KRTC. All Terra Classic denominations exist in the same pool.
 
-On May 25th, 2022, Terra Classic users passed [governance proposal 1623](https://station.terra.money/proposal/1623), which outlined the genesis of a new Terra chain. This proposal also described a genesis distribution of Luna which would be airdropped to users of the Terra Classic chain based on pre-depeg and post-depeg snapshots. Users can find their airdropped Luna by viewing the same wallet address that was present during either snapshot and [switching their Station network](./station/networks.mdx) to the `phoenix-1` mainnet.
+Luna Classic: The Terra Luna Classic protocol’s native [staking](https://classic-docs.terra.money/docs/learn/glossary.html#staking) token that absorbs the price volatility of Terra. Luna is used for [governance](https://classic-docs.terra.money/docs/learn/protocol.html#governance) and in mining. Users stake Luna Classic to validators who record and verify transactions on the [blockchain](https://classic-docs.terra.money/docs/learn/glossary.html#blockchain) in exchange for rewards from transaction fees. The more Terra is used, the more Luna Classic is worth.
 
-On May 27th, 2022 the `phoenix-1` Terra mainnet launched, ushering in a new era of development by the Terra community.
+## How the Terra Classic Protocol Works
 
-## Luna airdrop distribution
+Stablecoins
+Stablecoins are the main feature of the Terra Classic protocol: crypto assets that track the price of an underlying currency. As a digital form of currency, Terra Classic stablecoins can be used just like [fiat currency](https://classic-docs.terra.money/docs/learn/glossary.html#fiat-currency) with [blockchain’s](https://classic-docs.terra.money/docs/learn/glossary.html#blockchain) added benefits: an unchangeable public ledger, instant transactions, faster settlement times, and fewer fees.
 
-At genesis, Luna will have a supply of 1 billion tokens allocated according to the following distribution:
+Stablecoins are only valuable to users if they maintain their [price peg](https://classic-docs.terra.money/docs/learn/glossary.html#peg). The Terra Classic protocol uses the basic market forces of supply and demand to maintain the price of Terra Classic. When the demand for Terra Classic is high and the supply is limited, the price of Terra Classic increases. When the demand for Terra Classic is low and the supply is too large, the price of Terra Classic decreases. The protocol ensures the supply and demand of Terra is always balanced, leading to a stable price.
 
-**Community pool**: 30%
+## Expansion and Contraction
 
-- Controlled by staked governance.
-- 10% earmarked for developers.
+Imagine the whole Terra Classic economy as two pools: one for Terra and one for Luna. To maintain the price of Terra Classic, the Luna Classic supply pool adds to or subtracts from Terra Classic's supply. Users burn Lunc to mint Terra Clasic and burn Terra Classic to mint Lunc, all incentivized by the protocol’s algorithmic [market module](https://classic-docs.terra.money/docs/develop/module-specifications/spec-market.html).
 
-**Pre-depeg LUNA holders airdrop**: 35%
+Expansion: When the price of Terra Classic is high relative to its [peg](https://classic-docs.terra.money/docs/learn/glossary.html#peg), supply is too small and demand is too high. The protocol incentivizes users to burn Lunc and mint Terra Classic. The new supply of Terra Classic makes its pool larger, balancing supply with demand. Users mint more Terra Classic from burned Lunc until Terra Classic reaches its target price. The Lunc pool gets smaller in this process, increasing the price of Lunc.
 
-- All bonded / unbonding Luna, minus TFL at “Pre-attack” snapshot; staking derivatives included.
-- For wallets with < 10k Luna: 30% unlocked at genesis; 70% vested over 2 years with 6-month cliff.
-- For wallets with < 1M Luna: 1-year cliff, 2-year vesting thereafter.
-- For wallets with > 1M Luna: 1-year cliff, 4-year vesting thereafter.
+Contraction: When the price of Terra Classic is too low relative to its peg, supply is too large and demand is too low. The protocol incentives users to burn Terra Classic and mint Luna Classic. The decrease in Terra Classic's supply causes scarcity, and the price of Terra Classic increases. More Luna Classic is minted from burned Terra Classic until Terra Classic reaches its target price. The Lunc pool increases and lowers in price.
 
-**Pre-depeg aUST holders airdrop**: 10%
+Luna Classic is the variable counterpart to the stable asset Terra Classic. By modulating supply, Lunc’s price increases as the demand for stablecoins increases.
 
-- 500K whale cap - covers up to 99.7% of all holders, but only 26.72% of aUST.
-- 30% unlocked at genesis; 70% vested over 2 years thereafter with a 6-month cliff.
-
-**Post-attack LUNA holders airdrop**: 10%
-
-- Staking derivatives are included.
-- 30% unlocked at genesis; 70% vested over 2 years thereafter with 6-month cliff.
-
-**Post-attack UST holders airdrop**: 15%
-
-- 30% unlocked at genesis; 70% vested over 2 years thereafter with 6-month cliff.
-
-Definitions:
-
-- “Pre-depeg snapshot to be taken at Terra Classic block 7544910 (2022.05.07 22:59:37+08:00)
-- “Post-depeg snapshot to be taken at Terra Classic block 7790000 (2022.05.27 00:38:08+08:00)
-  All tokens locked or vesting are staked at genesis and must be unbonded to become liquid.
-
-## Vesting
-
-Many users of the Terra Classic blockchain have Luna vesting in their accounts from the [Terra genesis airdrop](#luna-airdrop-distribution). Vesting is the term used for Luna that cannot be traded and remains locked in an account until a certain date. The vesting schedule describes the amount of time Luna will remain locked, when it will be unlocked, and how much will be released once the unlock happens.
-
-A cliff is the period of time that must pass before Luna can begin to be unlocked.
-After the cliff period has passed, a small amount of the vesting Luna will be released every block according to the vesting period.
-
-For example, according to the genesis Luna distribution, Terra Classic wallets that contained less than 10,000 Luna during the pre-depeg snapshot will be airdropped Luna with the following vesting schedule:
-
-> 30% unlocked at genesis; 70% vested over 2 years with a six-month cliff.
-
-This means that 30% of a user's airdropped Luna will be unlocked and can be freely traded at the start of the new Terra blockchain. 70% of the airdropped Luna will be locked for six months without being released (the "cliff").
-
-After six months, a small portion of the remaining 70% of Luna will be released every block for 2 years. After 2 years, all the airdropped Luna will have been released, and the vesting will be complete.
-
-**Example**: A user had less than 10k Luna in their Terra Classic wallet during the pre-depeg snapshot. 1000 Luna total is airdropped to their wallet.
-
-- 300 Luna will be unlocked and able to be freely traded at the start of the new Terra chain.
-- No more Luna will be unlocked until six months have passed (the cliff).
-- After six months, the remaining 700 Luna will begin to unlock every block over a 2-year period at a rate of .96 Luna per day (700 Luna ÷ 730 days).
-
-Luna that is in the vesting state can still be [delegated, redeleagated, or undelegated](#bonding-staking-and-delegating) from validators.
-
-To learn how to view vesting Luna in your wallet, visit the [Station vesting guide](./station/vesting.mdx).
-
-To learn more about vesting, visit the [How vesting works](../../docs/develop/vesting.mdx).
 
 ## Validators
 
-Validators are the miners of the Terra [blockchain](./glossary.mdx#blockchain). They are responsible for securing the Terra blockchain and ensuring its accuracy. Validators run programs called full nodes which allow them to verify each transaction made on the Terra network. Validators propose blocks, vote on their validity, and add each new block to the chain in exchange for staking rewards from transaction fees. Users can stake their Luna to validators in exchange for staking rewards. Validators also play an important role in the governance of the Terra protocol.
+Validators are the miners of the Terra [blockchain](https://classic-docs.terra.money/docs/learn/glossary.html#blockchain). They are responsible for securing the Terra blockchain and ensuring its accuracy. Validators run programs called full nodes which allow them to verify each transaction made on the Terra network. Validators propose blocks, vote on their validity, and add each new block to the chain in exchange for staking rewards from transaction fees. Users can stake their Luna to validators in exchange for staking rewards. Validators also play an important role in the governance of the Terra protocol.
 
-For more information on validators, visit the [Validator FAQ](../full-node/manage-a-terra-validator/faq.mdx).
+For more information on validators, visit the [Validator FAQ](https://classic-docs.terra.money/docs/full-node/manage-a-terra-validator/faq.html).
+
 
 ### Consensus
 
-The Terra blockchain is a proof-of-stake blockchain, powered by the [Cosmos SDK](https://cosmos.network/) and secured by a system of verification called the Tendermint consensus.
+The Luna Classic blockchain is a proof-of-stake blockchain, powered by the [Cosmos SDK](https://cosmos.network/) and secured by a system of verification called the Tendermint consensus.
 
 The following process explains how Tendermint consensus works. For more information on the Tendermint consensus, visit the [official Tendermint documentation](https://docs.tendermint.com/).
 
@@ -100,7 +54,7 @@ This process repeats, adding new blocks of transactions to the chain. Each valid
 
 ## Staking
 
-Staking is the process of bonding Luna to a validator in exchange for staking rewards.
+Staking is the process of bonding Luna Classic to a validator in exchange for staking rewards.
 
 The Terra protocol only allows the top 130 validators to participate in consensus. A validator's rank is determined by their stake or the total amount of Luna bonded to them. Although validators can bond Luna to themselves, they mainly amass larger stakes from delegators. Validators with larger stakes get chosen more often to propose new blocks and earn proportionally more rewards.
 
@@ -116,11 +70,11 @@ Staked Luna never leaves the possession of the delegator. Even though it can’t
 
 </Admonition>
 
-### Phases of Luna
+### Phases of Luna Classic
 
-To start receiving rewards, delegators bond their Luna to a validator. The bonding process adds a delegator's Luna to a validator's stake, which helps validators to participate in consensus.
+To start receiving rewards, delegators bond their Luna Classic to a validator. The bonding process adds a delegator’s Luna Classic to a validator’s stake, which helps validators to participate in consensus.
 
-Luna exists in the following three phases:
+Luna Classic exists in the following three phases:
 
 - **Unbonded**: Luna that can be freely traded and is not staked to a validator.
 - **Bonded**: Luna that is staked to a validator. Bonded Luna accrues staking rewards. Luna bonded to validators in Station can’t be traded freely.
@@ -128,13 +82,13 @@ Luna exists in the following three phases:
 
 ### Bonding, staking, and delegating
 
-Generally, the terms bonding, staking, and delegating can be used interchangeably, as they happen in the same step. A delegator delegates Luna to a validator, the Luna gets bonded to the validator, and the bonded Luna gets added to the validator's stake.
+Generally, the terms bonding, staking, and delegating can be used interchangeably, as they happen in the same step. A delegator delegates Lunc to a validator, the Lunc gets bonded to the validator, and the bonded Lunc gets added to the validator’s stake.
 
-Delegators can bond Luna to any validator in the [active set](./glossary.mdx#active-set) using the delegate function in Station. Delegators start earning staking rewards the moment they bond or stake to a validator.
+Delegators can bond Luna to any validator in the [active set](https://classic-docs.terra.money/docs/learn/glossary.html#active-set) using the delegate function in Terra Station. Delegators start earning staking rewards the moment they bond or stake to a validator.
 
 ### Unbonding
 
-Delegators can unbond or unstake their Luna using the [undelegate function in Station](./station/staking.mdx#undelegate). The unbonding process takes 21 days to complete. During this period, the unbonding Luna can't be traded, and no staking rewards accrue.
+Delegators can unbond or unstake their Lunc using the undelegate function in Terra Station. The unbonding process takes 21 days to complete. During this period, the unbonding Luna can’t be traded, and no staking rewards accrue.
 
 <Admonition type="caution" icon="☢️">
 
@@ -142,29 +96,28 @@ After funds are undelegated, they will be locked for a period of 21 days. Once t
 
 </Admonition>
 
-The 21-day unbonding period assists in the long-term stability of Terra. The unbonding period discourages volatility by locking staked Luna in the system for at least 21 days. In exchange, delegators receive staking rewards, further incentivizing network stability.
+The 21-day unbonding period assists in the long-term stability of Luna Classic. The unbonding period discourages volatility by locking staked Luna in the system for at least 21 days. In exchange, delegators receive staking rewards, further incentivizing network stability.
 
 ### Redelegation
 
-Redelegating instantly sends staked Luna from one validator to another. Instead of waiting for the 21-day unstaking period, a user can redelegate their staked Luna at any time using Station's redelegate function. Validators receiving redelegations are barred from further redelegating any amount of Luna to any validator for 21 days. Follow the [Station redelegation guide](./station/staking.mdx#redelegate) to learn how to redelegate.
+Redelegating instantly sends staked Luna from one validator to another. Instead of waiting for the 21-day unstaking period, a user can redelegate their staked Lunc at any time using Terra Station’s redelegate function. Validators receiving redelegations are barred from further redelegating any amount of Lunc to any validator for 21 days.
 
 <Admonition type="caution" icon="☢️">
 
-When a user redelegates staked Luna from one validator to another, the validator receiving the staked Luna is barred from making further redelegation transactions for 21 days. This restriction only applies to the wallet that made the redelegation transaction.
+When a user redelegates staked Lunc from one validator to another, the validator receiving the staked Lunc is barred from making further redelegation transactions for 21 days. This requirement only applies to the wallet that made the redelegation transaction.
 
 </Admonition>
 
 ## Rewards
 
-The Terra protocol incentivizes validators and delegators with staking rewards from gas fees and inflation rewards:
+The Terra Luna Classic protocol incentivizes validators and delegators with staking rewards. Staking rewards come from two sources: gas and swap fees.
 
-- [Gas](./fees.mdx#gas): Compute fees added on to each transaction to avoid spamming. Validators set minimum gas prices and reject transactions that have implied gas prices below this threshold.
+[Gas](https://classic-docs.terra.money/docs/learn/fees.html#gas): Compute fees added on to each transaction to avoid spamming. Validators set minimum gas prices and reject transactions that have implied gas prices below this threshold.
 
-- [Inflation rewards](../develop/module-specifications/spec-mint.mdx): Every block, new Luna is minted and released to validators and delegators as staking rewards. The rate for the minting of this new Luna is fixed at 7% per year.
 
 For more information on fees, visit the [fee page](./fees.mdx).
 
-At the end of every block, transaction fees and inflation rewards are distributed to each validator and their delegators proportional to their staked amount. Validators can keep a portion of rewards to pay for their services. This portion is called commission. The rest of the rewards are distributed to delegators according to their staked amounts.
+At the end of every block, transaction fees are distributed to each validator and their delegators proportional to their staked amount. Validators can keep a portion of rewards to pay for their services. This portion is called commission. The rest of the rewards are distributed to delegators according to their staked amounts.
 
 ### Slashing
 
@@ -188,14 +141,13 @@ For more information on slashing, visit the [slashing module](../develop/module-
 
 ## Governance
 
-The Terra protocol is a decentralized public [blockchain](./glossary.mdx#blockchain) governed by community members. Governance is the democratic process that allows users and validators to make changes to the Terra protocol. Community members submit, vote, and implement proposals.
+The Terra Classic protocol is a decentralized public [blockchain](https://classic-docs.terra.money/docs/learn/glossary.html#blockchain) governed by community members. Governance is the democratic process that allows users and validators to make changes to the Terra protocol. Community members submit, vote, and implement proposals.
 
-To learn how to vote with your staked Luna or submit proposals, visit the [Station governance guide](./station/governance.mdx).
+To learn how to vote with your staked Luna Classic or submit proposals, visit the [Terra Station governance guide](https://classic-docs.terra.money/docs/learn/terra-station/governance.html).
 
 ### Proposals
 
-Proposals start as ideas within the community on Terra's [Agora forum](https://agora.terra.money/). After gaining support and feedback from the community, a proposer [drafts and submits a proposal](./station/governance.mdx#create-a-new-proposal) alongside an [initial deposit](./station/governance.mdx#deposit-luna-to-a-proposal).
-
+Proposals start as ideas within the community. A community member drafts and submits a proposal alongside an initial deposit.
 The most common proposal types include:
 
 - `ParameterChangeProposal`: To change the parameters defined in each module.
@@ -204,13 +156,13 @@ The most common proposal types include:
 
 ### Voting process
 
-Community members vote with their staked Luna. One staked Luna equals one vote. If a user fails to specify a vote, their vote defaults to the validator they are staked to. Validators vote with their entire stake unless specified by delegators. For this reason, it is very important that each delegator votes according to their preferences.
+Community members vote with their staked Lunc. One staked Lunc equals one vote. If a user fails to specify a vote, their vote defaults to the validator they are staked to. Validators vote with their entire stake unless specified by delegators. For this reason, it is very important that each delegator votes according to their preferences.
 
-The following is a basic outline of the governance process. Visit the [governance module](../develop/module-specifications/spec-governance.mdx) for more details.
+The following is a basic outline of the governance process. Visit the [governance module](https://classic-docs.terra.money/docs/develop/module-specifications/spec-governance.html) for more details.
 
 1. A user submits a proposal and a one-week deposit period begins.
 
-2. Users deposit Luna as collateral to back the proposal. This period ends once a minimum threshold of 512 Luna is deposited. Deposits are to protect against spam.
+2. Users deposit Luna as collateral to back the proposal. This period ends once a minimum threshold of 1M Luna Classic is deposited. Deposits are to protect against spam.
 
 3. The one-week vote period begins.
    The voting options are:
@@ -224,7 +176,7 @@ The following is a basic outline of the governance process. Visit the [governanc
 
    Proposals pass if they meet three conditions:
 
-   - `Quorum` is met: at least 30% of all staked Luna must vote.
+   - `Quorum` is met: at least 30% of all staked Lunc must vote.
    - The total number of `NoWithVeto` votes is less than 33.4% of the total vote.
    - `Threshold` is met: the number of `Yes` votes is greater than the number of `no` and `NoWithVeto` votes. `Abstain` votes are excluded from the `Threshold` tally.
 
@@ -235,7 +187,7 @@ The following is a basic outline of the governance process. Visit the [governanc
 5. Accepted proposals get put into effect.
 6. Deposits get refunded or burned.
 
-Once accepted, the changes described in a governance proposal are automatically put into effect by the proposal handler. Generic proposals, such as a passed `TextProposal`, must be reviewed by the Terra team and community, and they must be manually implemented.
+Once accepted, the changes described in a governance proposal are automatically put into effect by the proposal handler. Generic proposals, such as a passed `TextProposal`, must be reviewed, and they must be manually implemented.
 
 ### Deposits
 
