@@ -6,7 +6,7 @@ const terraStationCards: CardProps[] = [
     lightSVG: '/img/icons/station/station.svg',
     darkSVG: '/img/icons/dark/station.svg',
     header: 'Download Station',
-    summary: "Download Station, Terra's official wallet.",
+    summary: "Download Station, Terra Classic's official wallet.",
   },
   {
     href: '/learn/station/migration',
@@ -35,21 +35,21 @@ const terraStationCards: CardProps[] = [
     lightSVG: '/img/icons/swap-1.svg',
     darkSVG: '/img/icons/dark/swap-1.svg',
     header: 'Switch networks',
-    summary: 'Switch between the mainnet, testnet, or LocalTerra.',
+    summary: 'Switch between the Classic mainnet, testnet, or LocalTerra.',
   },
   {
     href: '/learn/station/testnet.html',
     lightSVG: '/img/icons/testnet.svg',
     darkSVG: '/img/icons/dark/testnet.svg',
     header: 'Testnet',
-    summary: 'Receive test Luna to carry out transactions on the testnet.',
+    summary: 'Receive test Luna Classic to carry out transactions on the testnet.',
   },
   {
     href: '/learn/station/staking.html',
     lightSVG: '/img/icons/core/staking.svg',
     darkSVG: '/img/icons/dark/staking.svg',
-    header: 'Stake Luna',
-    summary: 'Stake Luna and start earning rewards.',
+    header: 'Stake Lunc',
+    summary: 'Stake Luna Classic and start earning rewards.',
   },
 
   {
@@ -57,7 +57,7 @@ const terraStationCards: CardProps[] = [
     lightSVG: '/img/icons/core/governance_2.svg',
     darkSVG: '/img/icons/dark/governance_2.svg',
     header: 'Governance',
-    summary: 'Learn about governance on Terra.',
+    summary: 'Learn about governance on Terra Classic.',
   },
 ];
 
