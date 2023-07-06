@@ -34,14 +34,14 @@ const developCards: CardProps[] = [
     lightSVG: '/img/icons/localterra.svg',
     darkSVG: '/img/icons/dark/localterra.svg',
     header: 'LocalTerra',
-    summary: 'Run a local Terra blockchain in Docker.'
+    summary: 'Run a local Terra Classic blockchain in Docker.'
   },
   {
-    href: 'https://faucet.terra.money/',
+    href: 'https://faucet.terrac.dev/',
     lightSVG: '/img/icons/Faucet.svg',
     darkSVG: '/img/icons/dark/Faucet.svg',
     header: 'Terra Testnet Faucet',
-    summary: 'Receive test Luna to carry out transactions on the testnet.'
+    summary: 'Receive test Luna Classic to carry out transactions on the testnet.'
   },
 ]
 
