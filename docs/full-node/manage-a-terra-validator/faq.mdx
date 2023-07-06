@@ -30,7 +30,7 @@ It is possible and encouraged for any user to run full nodes even if they do not
 
 The Columbus-5 Mainnet is a public Proof of Stake (PoS) blockchain. This means a validator's weight (total stake) is determined by the amount of staking tokens (Lunc) they delegate to themselves plus the Luna Classic bonded to them by external delegators. The weight of a validator determines whether or not they are an active validator and how frequently they can propose a block. Validators with a higher weight will propose blocks more frequently, and in turn generate more revenue.
 
-The active validator set is made up of the top 130 validators who hold the most Luna. The barrier for entry into the network is dictated by the value of the lowest stake held in the validator set. For instance, if a validator is created with a higher stake than the bottom validator, then this newly created validator may join the active set. If validators double-sign, or are frequently offline, they risk their staked Luna, including Luna delegated by users, by being slashed by the protocol to penalize negligence and misbehaviour.
+The active validator set is made up of the top 130 validators who hold the most Lunc. The barrier for entry into the network is dictated by the value of the lowest stake held in the validator set. For instance, if a validator is created with a higher stake than the bottom validator, then this newly created validator may join the active set. If validators double-sign, or are frequently offline, they risk their staked Lunc, including Lunc delegated by users, by being slashed by the protocol to penalize negligence and misbehaviour.
 
 ### What is a delegator?
 
@@ -62,9 +62,9 @@ Any participant in the network can signal their intent to become a validator by 
 
 - **Commission change rate**: The maximum daily increase of the validator's commission.(This cannot be changed)
 
-- **Minimum self-bond amount**: The minimum amount of bonded Luna the validator needs at all times. If the validator's self-bonded stake falls below this limit, its entire staking pool will be unbonded.
+- **Minimum self-bond amount**: The minimum amount of bonded Lunc the validator needs at all times. If the validator's self-bonded stake falls below this limit, its entire staking pool will be unbonded.
 
-- **Initial self-bond amount**: The initial amount of Luna the validator self-bonds.
+- **Initial self-bond amount**: The initial amount of Lunc the validator self-bonds.
 
 **Example:**
 
@@ -113,15 +113,15 @@ After a validator is created with the `create-validator` transaction, it can be 
 
 - `unbonding`: A validator that is not in the active set and cannot participate in consensus. This validator is not earning rewards but can still be slashed for misbehaviour. This is a transition state from `bonded` to `unbonded`. If a validator does not send a `rebond` transaction while in `unbonding` mode, it will take three weeks for the state transition to complete.
 
-- `unbonded`: A validator that is not in the active set and not signing blocks. Unbonded validators can't be slashed and can't earn any rewards from their operation. It is still possible to delegate Luna to unbonded validators. Undelegating from an `unbonded` validator is processed immediately.
+- `unbonded`: A validator that is not in the active set and not signing blocks. Unbonded validators can't be slashed and can't earn any rewards from their operation. It is still possible to delegate Lunc to unbonded validators. Undelegating from an `unbonded` validator is processed immediately.
 
 All Delegators have the same state as their validator.
 
-Delegations are not necessarily bonded. Luna can be delegated and bonded, delegated and unbonding, delegated and unbonded, or liquid.
+Delegations are not necessarily bonded. Lunc can be delegated and bonded, delegated and unbonding, delegated and unbonded, or liquid.
 
 ### What is "self-bonding"? How can I increase my "self-bond"?
 
-A validator operator's "self-bond" refers to the amount of Luna delegated to itself. You can increase your self-bond by delegating more Luna to your validator account.
+A validator operator's "self-bond" refers to the amount of Lunc delegated to itself. You can increase your self-bond by delegating more Lunc to your validator account.
 
 ### Can I delegate to a validator outside of the active set?
 
@@ -137,7 +137,7 @@ Be careful when delegating to validators outside of the active set. Some inactiv
 
 Use the [Terra Classic faucet](https://faucet.terrac.dev/) to obtain coins for the testnet.
 
-### Is there a minimum amount of Luna that must be staked to be an active (bonded) validator?
+### Is there a minimum amount of Lunc that must be staked to be an active (bonded) validator?
 
 There is no set minimum. The top 130 validators with the highest total stake (where total stake = self-bonded stake + delegated stake) make up the active validator set. The validator with the lowest stake among the top 130 sets the barrier to entry for the active set.
 
@@ -258,9 +258,9 @@ Even if a validator does not intentionally misbehave, it can still be slashed if
 
 </Admonition>
 
-### Are validators required to self-bond Luna?
+### Are validators required to self-bond Lunc?
 
-No, but self-bonding has benefits. A validator's total stake is made up of their self-bonded stake plus their delegated stake. This means that a validator can compensate for low amounts of self-bonded Luna by attracting more delegators. This is why reputation is very important for validators.
+No, but self-bonding has benefits. A validator's total stake is made up of their self-bonded stake plus their delegated stake. This means that a validator can compensate for low amounts of self-bonded Lunc by attracting more delegators. This is why reputation is very important for validators.
 
 Although validators are not required to self-bond Luna Classic, all validators should have `skin-in-the-game`. This can help make a validator more trustworthy.
 
