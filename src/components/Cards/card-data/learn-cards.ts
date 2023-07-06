@@ -6,21 +6,21 @@ const learnCards: CardProps[] = [
     lightSVG: '/img/icons/terra.svg',
     darkSVG: '/img/icons/dark/terra.svg',
     header: 'What is Terra?',
-    summary: 'Learn how Terra works.',
+    summary: 'Learn how Terra Classic works.',
   },
   {
     href: '/learn/station',
     lightSVG: '/img/icons/station/station.svg',
     darkSVG: '/img/icons/dark/station.svg',
     header: 'Get started with Station',
-    summary: 'Create a wallet and stake Luna for rewards.',
+    summary: 'Create a wallet and stake Luna Classic for rewards.',
   },
   {
     href: '/learn/protocol/#what-is-luna',
     lightSVG: '/img/icons/luna.svg',
     darkSVG: '/img/icons/dark/luna.svg',
     header: 'What is Luna?',
-    summary: 'Learn about Luna.',
+    summary: 'Learn about Luna Classic.',
   },
   {
     href: '/learn/protocol/#validators',
@@ -41,7 +41,7 @@ const learnCards: CardProps[] = [
     lightSVG: '/img/icons/Glossary.svg',
     darkSVG: '/img/icons/dark/Glossary.svg',
     header: 'Glossary',
-    summary: 'Look up terms specific to Terra.',
+    summary: 'Look up terms specific to Terra Classic.',
   },
 ];
 
