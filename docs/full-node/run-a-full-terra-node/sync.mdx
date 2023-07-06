@@ -10,28 +10,7 @@ import Admonition from '@theme/Admonition';
 
 Certain files will need to be absent or deleted prior to download. A quicksync replaces blockchain data with a customized snapshot. For most use cases a “pruned” version is adequate. Pruned versions will have certain transactions removed from the archive to make node performance smoother. If you are running a node for archival purposes, you will want an “archive” or “default” download.
 
-<Admonition type="caution" icon="☢️" title="Warning">
-  
-Before you attempt to sync your node, confirm that you have properly set up your [system configuration](./system-config.mdx#system-configuration) and [built Terra core](./build-terra-core.mdx#get-the-terra-core-source-code).
-
-</Admonition>
-
-## Sync from genesis
-
-The process for syncing your full node from genesis will differ between the Pisco testnet and Phoenix mainnet networks. You may proceed with the instructions corresponding with your [chosen network](./join-a-network.mdx#join-a-public-network) below.
-
-### Rebel-2 testnet
-
-To sync a Rebel-2 testnet node, you will need to use version `v2.0.0-rc.0` of terrad up until the block height of `838,500`. To sync your node from block 838,500 until block 2,777,777, you will need to use version `v2.1.0-beta.1` of terrad. From block 2,777,777 until 4,712,048, use version `v2.2.0` of terrad. From block 4,712,048 onwards, use `v2.3.0-rc.0`
-
-1. To switch to version `v2.0.0-rc.0` of terrad, [change into your `core` directory](./build-terra-core.mdx#get-the-terra-core-source-code) and execute the following commands in your terminal:
-
-```sh Terminal
-git checkout v2.0.0-rc.0
-make install
-```
-
-After running these commands, make sure that you have switched to the correct version of terrad by running the following command:
+After choosing the appropriate download type, examine your node and ensure that `.terra/data` is empty.
 
 **Example:**
 ```bash
