@@ -13,7 +13,7 @@ const terrainCards: CardProps[] = [
     lightSVG: '/img/icons/smart-contract.svg',
     darkSVG: '/img/icons/dark/smart-contract.svg',
     header: 'Contract migration with Terrain',
-    summary: 'Learn how to migrate CosmWasm contracts on Terra.'
+    summary: 'Learn how to migrate CosmWasm contracts on Terra Classic.'
   },
   {
     href: '/develop/terrain/using-terrain-testnet.html',
